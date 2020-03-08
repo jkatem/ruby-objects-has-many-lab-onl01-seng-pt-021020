@@ -7,12 +7,11 @@ class Song
 
   def initialize(name)
     @name = name
-
-    save
   end
 
-  def save
-    @@all << self
+  def songs
+    Song.all.select do |song|
+      song.artist == self
   end
 
   def self.all
@@ -23,5 +22,8 @@ class Song
 
 
   end
+
+
+
 
 end
