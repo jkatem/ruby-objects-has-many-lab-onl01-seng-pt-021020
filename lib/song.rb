@@ -1,19 +1,23 @@
-require 'pry'
-
 class Song
-
   attr_accessor :name, :artist
 
   @@all = []
 
-  def initialize(name)
+  def initialize(name, artist=nil)
     @name = name
-    @@all << self.all
-
-    binding.pry
-    # @name = 'Survivor'
+    @artist = artist
+    @@all << self
   end
 
+  def artist_name
+    if self.artist
+      self.artist.name
+    else
+      nil
+    end
+  end
 
-
+  def self.all
+    @@all
+  end
 end
