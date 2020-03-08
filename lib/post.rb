@@ -11,9 +11,6 @@ class Post
     @@all << self
   end
 
-  def posts
-    Post.all.select {|post| post.arthor == self}
-  end
 
   def self.all
     @@all
