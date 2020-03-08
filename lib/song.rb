@@ -21,7 +21,7 @@ class Song
 
   def artist_name
 
-binding.pry
+
   end
 
 end
